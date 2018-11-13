@@ -21,8 +21,38 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Table5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ac8-M4-j8x">
                                 <rect key="frame" x="0.0" y="-44" width="375" height="665"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0RO-2v-BYK">
+                                <rect key="frame" x="20" y="629" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Par-4N-FGI">
+                                <rect key="frame" x="77" y="628" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50918714320000003" blue="0.1104984802" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eU-Qo-eh9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2w-xc-f5V">
+                                <rect key="frame" x="164" y="628" width="65" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50918714320000003" blue="0.1104984802" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NBQ-QP-Xls"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="cYR-LM-0pI"/>
+                                </constraints>
+                                <state key="normal" title="New Spin">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="faS-Ms-IWH" kind="show" id="jHk-aQ-buz"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l7h-iq-iel">
-                                <rect key="frame" x="20" y="20" width="335" height="601"/>
+                                <rect key="frame" x="40" y="13" width="335" height="601"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,36 +147,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zlz-Rc-9wY"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0RO-2v-BYK">
-                                <rect key="frame" x="20" y="629" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Par-4N-FGI">
-                                <rect key="frame" x="77" y="628" width="30" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.50918714320000003" blue="0.1104984802" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eU-Qo-eh9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2w-xc-f5V">
-                                <rect key="frame" x="164" y="628" width="65" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.50918714320000003" blue="0.1104984802" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NBQ-QP-Xls"/>
-                                    <constraint firstAttribute="width" constant="65" id="cYR-LM-0pI"/>
-                                </constraints>
-                                <state key="normal" title="New Spin">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="faS-Ms-IWH" kind="show" id="jHk-aQ-buz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -154,7 +154,8 @@
                             <constraint firstItem="k2w-xc-f5V" firstAttribute="centerY" secondItem="Par-4N-FGI" secondAttribute="centerY" id="Mtx-NC-okd"/>
                             <constraint firstItem="k2w-xc-f5V" firstAttribute="top" secondItem="Ac8-M4-j8x" secondAttribute="bottom" constant="7" id="MvC-8L-jh8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2w-xc-f5V" secondAttribute="trailing" constant="146" id="WBK-c4-soQ"/>
-                            <constraint firstItem="k2w-xc-f5V" firstAttribute="leading" secondItem="Par-4N-FGI" secondAttribute="trailing" constant="57" id="Xv8-Sf-3zN"/>
+                            <constraint firstItem="k2w-xc-f5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Par-4N-FGI" secondAttribute="trailing" constant="8" symbolic="YES" id="Xv8-Sf-3zN"/>
+                            <constraint firstItem="Par-4N-FGI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="77" id="dqO-ob-Vb1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k2w-xc-f5V" secondAttribute="bottom" constant="9" id="vaO-AJ-O6B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -310,7 +311,7 @@
                                         <rect key="frame" x="50" y="180" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.50918714320000003" blue="0.1104984802" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="Num111.png"/>
+                                        <state key="normal" image="Num11.png"/>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dq-jb-Qwq">
                                         <rect key="frame" x="5" y="180" width="35" height="35"/>
@@ -419,42 +420,42 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Num1.png" width="35" height="35"/>
-        <image name="Num10.png" width="35" height="35"/>
-        <image name="Num111.png" width="35" height="35"/>
-        <image name="Num12.png" width="35" height="35"/>
-        <image name="Num13.png" width="35" height="35"/>
-        <image name="Num14.png" width="35" height="35"/>
-        <image name="Num15.png" width="35" height="35"/>
-        <image name="Num16.png" width="35" height="35"/>
-        <image name="Num17.png" width="35" height="35"/>
-        <image name="Num18.png" width="35" height="35"/>
-        <image name="Num19.png" width="35" height="35"/>
-        <image name="Num2.png" width="35" height="35"/>
-        <image name="Num20.png" width="35" height="35"/>
-        <image name="Num21.png" width="35" height="35"/>
-        <image name="Num22.png" width="35" height="35"/>
-        <image name="Num23.png" width="35" height="35"/>
-        <image name="Num24.png" width="35" height="35"/>
-        <image name="Num25.png" width="35" height="35"/>
-        <image name="Num26.png" width="35" height="35"/>
-        <image name="Num27.png" width="35" height="35"/>
-        <image name="Num28.png" width="35" height="35"/>
-        <image name="Num29.png" width="35" height="35"/>
-        <image name="Num3.png" width="35" height="35"/>
-        <image name="Num30.png" width="35" height="35"/>
-        <image name="Num31.png" width="35" height="35"/>
-        <image name="Num32.png" width="35" height="35"/>
-        <image name="Num33.png" width="35" height="35"/>
-        <image name="Num34.png" width="35" height="35"/>
-        <image name="Num35.png" width="35" height="35"/>
-        <image name="Num36.png" width="35" height="35"/>
-        <image name="Num4.png" width="35" height="35"/>
-        <image name="Num5.png" width="35" height="35"/>
-        <image name="Num6.png" width="35" height="35"/>
-        <image name="Num7.png" width="35" height="35"/>
-        <image name="Num8.png" width="35" height="35"/>
-        <image name="Num9.png" width="35" height="35"/>
+        <image name="Num1.png" width="300" height="300"/>
+        <image name="Num10.png" width="300" height="300"/>
+        <image name="Num11.png" width="300" height="300"/>
+        <image name="Num12.png" width="300" height="300"/>
+        <image name="Num13.png" width="300" height="300"/>
+        <image name="Num14.png" width="300" height="300"/>
+        <image name="Num15.png" width="300" height="300"/>
+        <image name="Num16.png" width="300" height="300"/>
+        <image name="Num17.png" width="300" height="300"/>
+        <image name="Num18.png" width="300" height="300"/>
+        <image name="Num19.png" width="300" height="300"/>
+        <image name="Num2.png" width="300" height="300"/>
+        <image name="Num20.png" width="300" height="300"/>
+        <image name="Num21.png" width="300" height="300"/>
+        <image name="Num22.png" width="300" height="300"/>
+        <image name="Num23.png" width="300" height="300"/>
+        <image name="Num24.png" width="300" height="300"/>
+        <image name="Num25.png" width="300" height="300"/>
+        <image name="Num26.png" width="300" height="300"/>
+        <image name="Num27.png" width="300" height="300"/>
+        <image name="Num28.png" width="300" height="300"/>
+        <image name="Num29.png" width="300" height="300"/>
+        <image name="Num3.png" width="300" height="300"/>
+        <image name="Num30.png" width="300" height="300"/>
+        <image name="Num31.png" width="300" height="300"/>
+        <image name="Num32.png" width="300" height="300"/>
+        <image name="Num33.png" width="300" height="300"/>
+        <image name="Num34.png" width="300" height="300"/>
+        <image name="Num35.png" width="300" height="300"/>
+        <image name="Num36.png" width="300" height="300"/>
+        <image name="Num4.png" width="300" height="300"/>
+        <image name="Num5.png" width="300" height="300"/>
+        <image name="Num6.png" width="300" height="300"/>
+        <image name="Num7.png" width="300" height="300"/>
+        <image name="Num8.png" width="300" height="300"/>
+        <image name="Num9.png" width="300" height="300"/>
         <image name="Table5.png" width="375" height="665"/>
     </resources>
 </document>
