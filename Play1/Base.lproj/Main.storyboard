@@ -22,15 +22,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="621"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l7h-iq-iel">
-                                <rect key="frame" x="0.0" y="13" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="51" width="375" height="563"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="xdZ-5n-E16" customClass="myTableViewCell" customModule="Play1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="38" id="xdZ-5n-E16" customClass="myTableViewCell" customModule="Play1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdZ-5n-E16" id="VBx-1j-1Lv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="201" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcp-Aj-ONW">
@@ -58,15 +58,15 @@
                                                     <rect key="frame" x="196" y="7" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-qB-qzf">
-                                                    <rect key="frame" x="306" y="7" width="20" height="20"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-qB-qzf">
+                                                    <rect key="frame" x="303" y="7" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="OZb-fb-Bhg"/>
                                                         <constraint firstAttribute="height" constant="20" id="a07-IB-QWZ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="izA-3i-yHK">
-                                                    <rect key="frame" x="326" y="7" width="20" height="20"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izA-3i-yHK">
+                                                    <rect key="frame" x="323" y="7" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="1VT-Zw-qwc"/>
                                                         <constraint firstAttribute="width" constant="20" id="OXc-T4-OZ8"/>
@@ -152,7 +152,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="faS-Ms-IWH" kind="show" id="jHk-aQ-buz"/>
+                                    <action selector="newSpinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uw-CQ-fg2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0RO-2v-BYK">
@@ -180,7 +180,7 @@
                             <constraint firstItem="Ac8-M4-j8x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="StS-Gd-Ual"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2w-xc-f5V" secondAttribute="trailing" constant="146" id="WBK-c4-soQ"/>
                             <constraint firstItem="k2w-xc-f5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Par-4N-FGI" secondAttribute="trailing" constant="8" symbolic="YES" id="Xv8-Sf-3zN"/>
-                            <constraint firstItem="l7h-iq-iel" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="13" id="bWH-7d-Eyx"/>
+                            <constraint firstItem="l7h-iq-iel" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="51" id="bWH-7d-Eyx"/>
                             <constraint firstItem="Par-4N-FGI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="77" id="dqO-ob-Vb1"/>
                             <constraint firstAttribute="trailing" secondItem="l7h-iq-iel" secondAttribute="trailing" id="gEy-zo-PPS"/>
                             <constraint firstItem="0RO-2v-BYK" firstAttribute="top" secondItem="Ac8-M4-j8x" secondAttribute="bottom" constant="7" id="omk-sn-1Iu"/>
@@ -192,6 +192,7 @@
                     <connections>
                         <outlet property="inputNum" destination="0RO-2v-BYK" id="NMP-ED-GTD"/>
                         <outlet property="tableList" destination="l7h-iq-iel" id="e2y-lH-2le"/>
+                        <segue destination="faS-Ms-IWH" kind="presentation" identifier="myInput" id="cPl-Oe-3Qi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

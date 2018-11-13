@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var test2:String = ""
     var myNum: Int = 99
     // end of data
+    
     // two extra functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -140,9 +141,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         else{
             print (" Error no input!")
         }
-
-        
     }
+    // end addButton
+    
+    @IBAction func newSpinButton(_ sender: UIButton) {
+        // open secong viewcontroller
+        performSegue(withIdentifier: "myInput", sender: self)
+        print(" inside newspin, inputNumber = \(inputNumber)")
+        if inputNumber != 99{
+            numberOfDraws += 1
+            print(" draw  \(numberOfDraws)")
+            print("draw number = \(inputNumber)")
+            drawNumbersArray.insert(inputNumber, at: 0)
+            print("drawNumbersArray = \(drawNumbersArray)")
+            tableList.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+            //reset the global inputNumber
+            inputNumber = 99
+        }
+        print(" going out newspin, inputNumber = \(inputNumber)")
+
+    }
+    
 
 }
 
