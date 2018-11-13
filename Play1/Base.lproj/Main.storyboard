@@ -617,6 +617,7 @@
                     </view>
                     <connections>
                         <outlet property="inputNum" destination="laF-Zn-xIw" id="zt8-zC-ezW"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="myBackOption" id="rcb-Kf-OGX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Me-n2-lUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -664,4 +665,7 @@
         <image name="Num9.png" width="300" height="300"/>
         <image name="Table5.png" width="375" height="665"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rcb-Kf-OGX"/>
+    </inferredMetricsTieBreakers>
 </document>

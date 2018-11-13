@@ -9,7 +9,7 @@
 import UIKit
 
 // Global variable
-var inputNumber:Int = 0
+//var inputNumber:Int = 0
 
 class mySecondViewController: UIViewController {
     @IBOutlet weak var inputNum: UILabel!
@@ -32,6 +32,9 @@ class mySecondViewController: UIViewController {
     
     @IBAction func confirmButton(_ sender: UIButton) {
         inputNumber = Int(inputNum.text!)!   // global variable
+        // using Seque to get back to the 1st view controller
+        //performSegue(withIdentifier: myBackOption, sender: self)
+        dismiss(animated: true, completion: nil)
     }
     
 }

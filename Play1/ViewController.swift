@@ -7,6 +7,8 @@
 //
 
 import UIKit
+// Global variable
+var inputNumber:Int = 99
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableList: UITableView!
