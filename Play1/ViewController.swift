@@ -10,6 +10,8 @@ import UIKit
 // Global variable
 var inputNumber:Int = 99
 var myIdentifier: String = ""
+var numberOfDraws: Int = 0
+var drawNumbersArray = [Int]()      // initialisation the draw numbers array
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableList: UITableView!
@@ -19,9 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Some data
     let drawNumbers = ["Num0", "Num1", "Num2", "Num3", "Num4", "Num5", "Num6", "Num7", "Num8", "Num9", "Num10", "Num11", "Num12", "Num13", "Num14", "Num15", "Num16", "Num17", "Num18", "Num19", "Num20", "Num21", "Num22", "Num23", "Num24", "Num25", "Num26", "Num27", "Num28", "Num29", "Num30", "Num31", "Num32", "Num33", "Num34", "Num35", "Num36"]
     let drawMark = ["Cross", ""]
-    var numberOfDraws: Int = 0
-    var drawNumbersArray = [Int]()      // initialisation the draw numbers array
-    var EvenNum = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36]
+   var EvenNum = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36]
     let smallNum = 18                   // small numbers from 1-18 inclusive
     let dozen1 = 12                     // 1st dozen from 1-12
     let dozen2 = 24                     // second dozen from 13-24
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // just
-        print("check inide numberOfRowsInSection = \(drawNumbersArray.count)")
+        //print("check inide numberOfRowsInSection = \(drawNumbersArray.count)")
         return drawNumbersArray.count
     }
     
@@ -51,8 +51,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // cell object
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! myTableViewCell
         if drawNumbersArray.count > 0 {
-            print("check inide cell count=",  drawNumbersArray.count)
-            print("check inide cell indexPath= \(indexPath)")
+            //print("check inide cell count=",  drawNumbersArray.count)
+            //print("check inide cell indexPath= \(indexPath)")
             // draw number
             myNum = drawNumbersArray[indexPath.row]
             if (cell.contentView.viewWithTag(201) as? UIImageView) != nil {
@@ -124,22 +124,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableList.tableFooterView = UIView.init(frame: .zero)
         tableList.dataSource = self
         tableList.delegate = self
-        // VT modified 14/11/18
-        if numberOfDraws > 1{
+    }
+    
+    // 14/11/18 test func ViewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // We will simply print out the value here
+        //print("In viewWillAppear, draw number = \(inputNumber)")
+        if inputNumber != 99 && inputNumber != 66 {
+            numberOfDraws += 1
+            inputNum.text = String(inputNumber)
+            //print(" draw  \(numberOfDraws)")
+            //print("draw number = \(inputNumber)")
+            drawNumbersArray.insert(inputNumber, at: 0)
+            //print("drawNumbersArray = \(drawNumbersArray)")
             tableList.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
         }
-        //end 14/11/18
+        else{
+            print (" Error no input yet!")
+        }
     }
+
 
     
     @IBAction func addButton(_ sender: UIButton) {
         // adding new row
         if inputNum.text != ""{
             numberOfDraws += 1
-            print(" draw  \(numberOfDraws)")
-            print("draw number = ", inputNum.text!)
+            //print(" draw  \(numberOfDraws)")
+            //print("draw number = ", inputNum.text!)
             drawNumbersArray.insert(Int(inputNum.text!)!, at: 0)
-            print("drawNumbersArray = \(drawNumbersArray)")
+            //print("drawNumbersArray = \(drawNumbersArray)")
             tableList.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
             //reset the input box
             inputNum.text = ""
@@ -153,19 +168,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func newSpinButton(_ sender: UIButton) {
         // open secong viewcontroller
         performSegue(withIdentifier: "myInput", sender: self)
-        print(" inside newspin, inputNumber = \(inputNumber)")
-        if inputNumber != 99{
-            numberOfDraws += 1
-            print(" draw  \(numberOfDraws)")
-            print("draw number = \(inputNumber)")
-            drawNumbersArray.insert(inputNumber, at: 0)
-            print("drawNumbersArray = \(drawNumbersArray)")
-            tableList.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
-            //reset the global inputNumber
-            inputNumber = 99
-        }
-        print(" going out newspin, inputNumber = \(inputNumber)")
-
     }
     
 
