@@ -9,6 +9,7 @@
 import UIKit
 // Global variable
 var inputNumber:Int = 99
+var myIdentifier: String = ""
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableList: UITableView!
@@ -123,6 +124,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableList.tableFooterView = UIView.init(frame: .zero)
         tableList.dataSource = self
         tableList.delegate = self
+        // VT modified 14/11/18
+        if numberOfDraws > 1{
+            tableList.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+        }
+        //end 14/11/18
     }
 
     

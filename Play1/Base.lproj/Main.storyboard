@@ -596,9 +596,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="dhi-37-cvK"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -666,7 +663,4 @@
         <image name="Num9.png" width="300" height="300"/>
         <image name="Table5.png" width="375" height="665"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="rcb-Kf-OGX"/>
-    </inferredMetricsTieBreakers>
 </document>
